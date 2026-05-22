@@ -92,7 +92,7 @@ Each endgame folder is self-contained with its own pipeline scripts.
 
 ## Key Features
 
-**Cyclic Knowledge Mining** — an iterative feature engineering methodology where `analyze.py` computes Information Gain specifically on misclassified positions (failures), revealing which chess concepts the model cannot "see". New attributes are added accordingly and the process repeats. This is how `sameColor` (bishop color parity in KBBK) and ray-casting attributes (KRKN) were discovered from data rather than assumed a priori.
+**Cyclic Knowledge Mining** — an iterative feature engineering methodology where `analyze.py` computes Information Gain specifically on misclassified positions (failures), revealing which chess concepts the model cannot "see". New attributes are added accordingly and the process repeats.
 
 **Ray-Casting for Rook Attacks** — `wR_attacks_bN_direct` checks whether the rook has a clear line of sight to the knight, accounting for blocking pieces. This single attribute reduced KRKN training errors from 1,545 to 784.
 
@@ -158,12 +158,6 @@ L(D) = L(H) + L(D|H)
 ```
 
 where `L(H)` is the size of the decision tree and `L(D|H)` is the size of the exceptions binary. Using an unpruned J48 increases `L(H)` but minimizes `L(D|H)` dramatically — the total `L(D)` is far smaller than any alternative representation.
-
----
-
-## Ablation Study
-
-Removing `sameColor` from KBBK BTM v3 reduces accuracy from 99.996% to ~59%, confirming it as the critical meta-mined feature discovered through Cyclic Knowledge Mining.
 
 ---
 
