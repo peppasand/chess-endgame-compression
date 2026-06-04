@@ -119,7 +119,7 @@ No external Python dependencies — only standard library (`csv`, `os`, `subproc
 [Weka 3.8.6](https://waikato.github.io/weka-wiki/downloading_weka/) — set path in `train_weka.py` or via `WEKA_PATH` environment variable.
 
 **Nalimov Tablebases:**  
-Download `.emd` files from [http://www.olympuschess.com/egtb/gaviota/](http://www.olympuschess.com/egtb/gaviota/) or similar source.
+Download `.emd` files from [http://tablebase.sesse.net/] or similar source.
 
 ---
 
